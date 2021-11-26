@@ -5,7 +5,7 @@ export default{
   category: 'Fun',
   description: 'Sends an embed', // Required for slash commands
   permissions: ['ADMINISTRATOR'],
-  slash: false,
+  slash: 'both',
   testOnly: true,
 
     callback: ({ message, text}) => {

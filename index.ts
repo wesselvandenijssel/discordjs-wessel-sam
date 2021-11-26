@@ -16,6 +16,7 @@ require("dotenv").config();
 //     }
 //   })
 // })
+
 import DiscordJS, { Intents } from 'discord.js'
 import WOKCommands from "wokcommands";
 import path from "path";
@@ -35,6 +36,12 @@ const client = new DiscordJS.Client({
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
   ],
 });
+
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function() {
+console.log("Listening on Port 3000");
+});
+
 
 client.on("ready", async () => {
   // await mongoose.connect(process.env.MONGO_URI || "", {
