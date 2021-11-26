@@ -21,7 +21,7 @@ import DiscordJS, { Application, Intents } from 'discord.js'
 import WOKCommands from "wokcommands";
 import path from "path";
 // import mongoose from "mongoose";
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 import dotenv from 'dotenv';
 // import testSchema from './test-schema'
 // const config = require('./config.json')
@@ -47,10 +47,10 @@ client.on("ready", async () => {
     typeScript: true, //Only use this if you are using Typescript AND "ts-node"
     testServers: ["910108011220041738"],
     botOwners: ["305295568245358603"],
-    // mongoUri: process.env.MONGO_URI,
-    // dbOptions: {
-    //   keepAlive: true,
-    // },
+    mongoUri: process.env.MONGO_URI,
+    dbOptions: {
+      keepAlive: true,
+    },
   });
 //   setTimeout(async() => {
 //     await new testSchema({
