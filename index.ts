@@ -23,7 +23,7 @@ import path from "path";
 // const mongoose = require('mongoose')
 import dotenv from 'dotenv';
 // import testSchema from './test-schema'
-const config = require('./config.json')
+// const config = require('./config.json')
 dotenv.config()
 // require ('dotenv').config()
 // const { Client, Intents } = require("discord.js");
